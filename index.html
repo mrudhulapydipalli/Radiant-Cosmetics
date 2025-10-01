@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Radiant Cosmetics</title>
+
+  <!-- Favicon (ICO recommended for widest support) -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <!-- Optional extra formats -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="site-grid">
+    <header class="site-header">
+      <div class="brand">
+        <img src="images/logo.jpeg" alt="Radiant logo" class="brand-logo" />
+        <span class="brand-name">Radiant Cosmetics</span>
+      </div>
+      <nav class="main-nav" id="nav">
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="site-main">
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Glow with Elegance</h1>
+          <p>Experience bold colors, pure ingredients, and timeless beauty.</p>
+          <a class="cta" href="#products">Shop Now</a>
+        </div>
+        <figure>
+          <img src="images/cosmetic.jpeg" alt="Cosmetics hero" />
+        </figure>
+      </section>
+
+      <section id="about" class="info section-grid">
+        <h2>About Us</h2>
+        <p>Radiant Cosmetics brings together nature and science to create vibrant, skin-friendly products. Our mission is beauty with integrity.</p>
+        <img src="images/cosmo.jpeg" alt="About Radiant" />
+      </section>
+
+      <section id="products" class="products">
+        <h2>Our Collection</h2>
+        <div class="product-list">
+          <article class="product-card">
+            <img src="images/blush.jpeg" alt="Product 1" />
+            <h3>Blush Palette</h3>
+            <p>Rich shades that blend like silk for a glowing look.</p>
+          </article>
+          <article class="product-card">
+            <img src="images/hydrating.jpeg" alt="Product 2" />
+            <h3>Hydrating Serum</h3>
+            <p>Lightweight formula with deep moisture for lasting radiance.</p>
+          </article>
+          <article class="product-card">
+            <img src="images/liptint.webp" alt="Product 3" />
+            <h3>Lip Tint</h3>
+            <p>Elegant colors enriched with natural oils for all-day wear.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="reviews" class="reviews">
+        <h2>What Our Customers Say</h2>
+        <div class="reviews-row">
+          <blockquote>"The blush is so pigmented and lasts all day!" <cite>— Priya</cite></blockquote>
+          <blockquote>"Finally found a lip tint that's both bold and moisturizing." <cite>— Alex</cite></blockquote>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section-grid">
+        <h2>Contact Us</h2>
+        <p>Email us at <a href="mailto:hello@radiant.example">hello@radiant.example</a></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2025 Radiant Cosmetics</p>
+      <ul>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+      </ul>
+    </footer>
+  </div>
+<script>
+const navToggle = document.getElementById('navToggle');
+const nav = document.getElementById('nav');
+navToggle.addEventListener('click', ()=>{ nav.classList.toggle('open'); });
+</script>
+</body>
+</html>
