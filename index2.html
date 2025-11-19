@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glow & Grace - Cosmetics</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="images/logo.png" alt="Logo" class="logo" />
+      <h1>Glow & Grace</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 🧩 Reusable template for products -->
+    <template id="product-template">
+      <div class="product-card">
+        <img src="" alt="" class="product-image" />
+        <h2 class="product-title"></h2>
+        <p class="product-description"></p>
+        <span class="product-price"></span>
+      </div>
+    </template>
+
+    <!-- Container where all products will be dynamically added -->
+    <section id="product-list" class="product-grid"></section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Glow & Grace. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript to load data dynamically -->
+  <script type="module">
+    import { mainContentData } from './data/content.js';
+
+    // Select template and container
+    const template = document.getElementById('product-template');
+    const container = document.getElementById('product-list');
+
+    // Loop through all products and generate HTML
+    mainContentData.forEach(item => {
+      const clone = template.content.cloneNode(true);
+      clone.querySelector('.product-image').src = item.image;
+      clone.querySelector('.product-image').alt = item.title;
+      clone.querySelector('.product-title').textContent = item.title;
+      clone.querySelector('.product-description').textContent = item.description;
+      clone.querySelector('.product-price').textContent = item.price;
+      container.appendChild(clone);
+    });
+  </script>
+</body>
+</html>
